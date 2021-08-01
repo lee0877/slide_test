@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>lee</title>
+  <style>
+    
+    html, body { box-sizing: border-box; padding: 0; margin: 0; text-align: center; }
+    *, *:before, *:after { box-sizing: inherit; }
+    .clearfix:after { content: ''; display: block; clear: both; float: none; }
+    .title { margin-bottom: 0; text-align: center; font-size: 30px; color: #333; }
+    .link, .link:visited { display: inline-block; margin: 20px 0; color: #555; text-decoration: none; font-weight: bold; }
+    .link:hover, .link:focus { color: #9fd6c2; }
+    /* container - body */
+    #container { width: 1000px; margin: auto; }
+    .slide_wrap { position: relative; width: 700px; margin: auto; padding-bottom: 30px; }
+    .slide_box { width: 100%; margin: auto; overflow-x: hidden; }
+    .slide_content { display: table; float: left; width: 700px; height: 700px; }
+    .slide_content > p { display: table-cell; vertical-align: middle; text-align: center; font-size: 100px; font-weight: bold; color: #555; }
+    .slide_content.slide01 { background: #ddbdff; }
+    .slide_content.slide02 { background: #9fd6c2; }
+    .slide_content.slide03 { background: #abe2f7; }
+    .slide_content.slide04 { background: #f08c78; }
+    .slide_content.slide05 { background: #fbdb65; }
+    .slide_btn_box > button { position: absolute; top: 50%; margin-top: -45px; width: 60px; height: 60px; font-size: 16px; color: #999; background: none; border: 1px solid #ddd; cursor: pointer; }
+    .slide_btn_box > .slide_btn_prev { left: -100px; }
+    .slide_btn_box > .slide_btn_next { right: -100px; }
+    .slide_pagination { position: absolute; left: 50%; bottom: 0; list-style: none; margin: 0; padding: 0; transform: translateX(-50%); }
+    .slide_pagination .dot { display: inline-block; width: 15px; height: 15px; margin: 0 5px; overflow: hidden; background: #ddd; border-radius: 50%; transition: 0.3s; }
+    .slide_pagination .dot.dot_active { background: #333; }
+    .slide_pagination .dot a { display: block; width: 100%; height: 100%; }
+
+    #main_box{
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    
+    #main_box main{
+      width:700px;
+      height: 600px;
+      float: left;
+      background-color: #ddbdff;
+       font-family: "HY헤드라인M";
+
+    }
+
+
+
+    #main_boxx{
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    
+    #main_boxx main{
+      width:700px;
+      height: 600px;
+      float: left;
+      background-color: #f08c78;
+    }
+
+      #main_boxxx{
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    
+    #main_boxxx main{
+      width:700px;
+      height: 600px;
+      background-color: #9fd6c2;
+    }
+
+       #main_boxxxx{
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    
+    #main_boxxxx main{
+      width:700px;
+      height: 600px;
+      background-color: #abe2f7;
+    }
+
+       #main_boxxxxx{
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    
+    #main_boxxxxx main{
+      width:700px;
+      height: 600px;
+      background-color: #fbdb65;
+    }
+    #imgg{
+      padding-top: 10%; 
+      padding-left: 20%;
+    }
+
+      #main1{
+      font-size: 54px;
+      padding-top: 25%;
+      font-weight: bold;
+      font-family: "HY헤드라인M";
+
+    }
+
+    .main2 li{
+      display: inline;
+        font-family: "HY헤드라인M";
+
+
+    }
+
+    .clear{
+      clear:left;
+    }
+
+
+    #main4{
+      font-size: 50px;
+      font-weight: bolder;
+    }
+
+       .main44 ul{
+      font-size: 18px;
+      line-height: 150%;
+      font-family: "HY헤드라인M";
+      padding-top: 30px;
+      line-height: 200%;
+
+
+    }
+
+    .main44 li{
+      display: inline;
+    }
+
+    .main44{
+      text-align: left;
+      float: left;
+      margin:5px;
+
+    }
+
+    .main44 img{
+      display: block;
+    } 
+
+    @keyframes cursor{
+      50%{ border-color: transparent; }
+    }
+
+    .text{
+    /*font-family: "HY헤드라인M";*/
+         text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      font-size: 45px;
+      height: 32px;
+      border-right: .05em solid black;
+      animation: cursor 0.5s ease infinite;
+
+
+    }
+
+    #mainx{
+      font-size: 54px;
+      padding-top: 30%;
+      font-weight: bold;
+       text-align: center;
+      
+    }
+
+    #colorr{
+      color:#fff44f;
+    }
+
+    #colorrr{
+      color:#0067a3;
+    }
+
+    .main3{
+      border:solid 3px #000000;
+      float: left;
+      margin: 5px;
+
+    }
+
+    .main3 img{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">Lee's Project</h1>
+  <a href="https://lee0877.github.io/NICETOMEETU2/sub_page1.html" class="link" target="_blank">Visit-front-end</a>
+  
+  <div id="container">
+    <div class="slide_wrap">
+      <div class="slide_box">
+        <div class="slide_list clearfix">
+          <div class="slide_content slide01">
+         <section id = "main_box">
+
+  <main>
+  <div class = "main2">
+    <br>
+    <br>
+    <img src = "img/person.png" width="350" height="300">
+  </div>
+
+  <div class = "main2">
+    <br>
+    <br>
+    <h1>JungHyun Lee</h1>
+  <ul>
+    <li>Front-end 개발자를 꿈꾸는 <span id ="bold">이정현</span>입니다.</li>
+    <div class ="clear"></div>
+    <li>단순하며 편리성을 지닌 모든이가 사용하기 쉬운 UI</li>
+    <div class ="clear"></div>
+    <li>인터넷 소외 계층인 고령층도 쉽고 간편하게 사용할 수 있는 UI</li>
+    <div class ="clear"></div>
+    를 만들고 싶습니다.</li>
+    
+  </ul>
+</div>
+
+<br>
+<br>
+<div class ="clear"></div>
+
+  <div class ="main2">
+    <ul>
+      <li>기술/스택</li>
+      <div class ="clear"></div>
+      <li>C&nbsp;&nbsp;&nbsp;●○○○○</li>&nbsp;
+      <li>HTML/CSS&nbsp;&nbsp;&nbsp;●●●○○</li>&nbsp;
+      <li>PYTHON&nbsp;&nbsp;&nbsp;●●○○○</li>&nbsp;
+      <div class ="clear"></div>
+      <li>JAVA&nbsp;&nbsp;&nbsp;●●○○○</li>&nbsp;
+      <li>SKETCH&nbsp;&nbsp;&nbsp;●●●●○</li>&nbsp;
+      <li>JAVASCRIPT&nbsp;&nbsp;&nbsp;●○○○○</li>&nbsp;
+    </ul>
+  </div>
+
+
+  
+  
+  </main>
+
+</section>
+
+          </div>
+
+
+          <div class="slide_content slide02">
+            <section id = "main_boxxx">
+  
+  <main>
+    <div class ="main2">
+    <ul>
+      <li>다양한 실습장치 경험✔</li>
+      <div class ="clear"></div>
+      <li>ARDUINO&nbsp;|&nbsp;</li>
+      <li>RASPBERRY PI&nbsp;|&nbsp;</li>
+      <li>WOW-4044(사물인터넷 실습 장치)&nbsp;|&nbsp;</li>
+      <li>FPGA&nbsp;|&nbsp;</li>
+      <li>ATMEGA128A</li>
+
+    </ul>
+  </div>
+<div class ="clear"></div>
+<div id ="imgg">
+    <div class ="main3">
+      <img src = "img/sch1.jpg" width="120" height="160">
+    </div>
+    <div class ="main3">
+      <img src = "img/sch2.jpg" width="120">
+    </div>
+    <div class ="main3">
+      <img src = "img/sch3.jpg" width="120" height="160">
+    </div>
+<div class ="clear"></div>
+    <div class ="main3">
+      <img src = "img/sch4.jpg" width="120">
+    </div>
+    <div class ="main3">
+      <img src = "img/sch5.jpg" width="120">
+    </div>
+    <div class ="main3">
+      <img src = "img/sch6.jpg" width="120">
+    </div>
+</div>
+    
+
+  <div class ="clear"></div>
+  
+  <br>
+  <br>
+
+  <div class ="main2">
+  <ul>
+    <li>Hard Ware와 UI를 접목시켜 H/W를 작동시키는 UI제작 가능</li>
+  </ul> 
+  </div>
+
+  <div class ="clear"></div>
+  <br>
+  
+<!-- 
+  <div class ="main3">
+      <img src = "img/motor.jpg" width="220" height="200">
+    </div> -->
+
+ <!--  <div class = "main2">
+    <br>
+    <br>
+    <form>
+      <div id ="hw_box">
+        <h4>예시</h4>
+        <h2>[HW]모터 구동</h2>
+        <div class = "main2">
+          <div id = "btn_o">
+            <BUTTON>구동 O</BUTTON>
+          </div>
+        </div>
+
+        <div class = "main2">
+          <div id = "btn_x">
+            <BUTTON>구동 X</BUTTON>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div> -->
+  <div class ="clear"></div>
+
+<!--   <div class = "main2">
+    <h4>☑️리눅스 환경에서 python을 이용하여 만든 프로그램입니다.</h4>
+  </div> -->
+  </main>
+
+</section>
+
+          </div>
+
+
+          <div class="slide_content slide03">
+            <section id = "main_boxxxx">
+  
+    <main>
+      
+      <br>
+      <div id = "main4">DREAM</div>
+      <br>
+      <div class ="main44">
+      <ul>
+        <li>저는 모든 사람들이 제가 만든 UI안에서 평등하길 바랍니다. </li>
+        <div class ="clear"></div>
+        <li>많은 것들이 기계화되는 현대사회에 소외되는 사람들을 보았습니다.</li>
+        <div class ="clear"></div>
+        <li>저는 그들이 많은 것들을 포기하고 살아가는 것을 보았습니다.</li>
+        <div class ="clear"></div>
+        <li>그렇게 소외되는 사람들에게 새로운 세상을 열어주고 싶습니다!</li>
+        
+
+      </ul>
+    </div>
+
+  <div class = "main2">
+    <img src = "img/me.png" width="300" height="300">
+  </div>
+  </main>
+
+</section>
+          </div>
+          <div class="slide_content slide04">
+  <section id = "main_boxx">
+  
+  <main>
+   
+    <div id = "main4">CONTACT</div>
+    <br>
+    <div class = "main2">
+      <img src = "img/call.png" width="400" height="400">
+    </div>
+
+    <div class ="main44">
+    <ul>
+
+      <li>📞 : 010 - 0000 - 0000</li>
+      <div class ="clear"></div>
+      <li>✉️ : thanks@forcoming.com</li>
+      <div class ="clear"></div>
+      <li>😀I hope to see you soon😀</li>
+    </ul>
+  </main>
+</section>
+          </div>
+          <div class="slide_content slide05">
+             <section id = "main_boxxxxxx">
+  
+  <main>
+   
+    <div id = "main4">Thank U for Visit</div>
+    <br>
+    <div class = "main2">
+      <img src = "img/pic1.png" width="300" height="300">
+    </div>
+
+    <div class ="main44">
+    <ul>
+
+      <li>방문해주셔서 감사합니다 :)</li>
+      <div class ="clear"></div>
+      <li>각 소비자에게 적합한 서비스를 제공하겠습니다.</li>
+      <div class ="clear"></div>
+      <li>코드의 가독성을 높여 작업의 효율을 높이겠습니다.</li>
+    </ul>
+  </main>
+</section>
+            
+          </div>
+        </div>
+        <!-- // .slide_list -->
+      </div>
+      <!-- // .slide_box -->
+      <div class="slide_btn_box">
+        <button type="button" class="slide_btn_prev">Prev</button>
+        <button type="button" class="slide_btn_next">Next</button>
+      </div>
+      <!-- // .slide_btn_box -->
+      <ul class="slide_pagination"></ul>
+      <!-- // .slide_pagination -->
+    </div>
+    <!-- // .slide_wrap -->
+  </div>
+  <!-- // .container -->
+
+  <script>
+    (function () {
+      const slideList = document.querySelector('.slide_list');  // Slide parent dom
+      const slideContents = document.querySelectorAll('.slide_content');  // each slide dom
+      const slideBtnNext = document.querySelector('.slide_btn_next'); // next button
+      const slideBtnPrev = document.querySelector('.slide_btn_prev'); // prev button
+      const pagination = document.querySelector('.slide_pagination');
+      const slideLen = slideContents.length;  // slide length
+      const slideWidth = 700; // slide width
+      const slideSpeed = 300; // slide speed
+      const startNum = 0; // initial slide index (0 ~ 4)
+      
+      slideList.style.width = slideWidth * (slideLen + 2) + "px";
+      
+      // Copy first and last slide
+      let firstChild = slideList.firstElementChild;
+      let lastChild = slideList.lastElementChild;
+      let clonedFirst = firstChild.cloneNode(true);
+      let clonedLast = lastChild.cloneNode(true);
+
+      // Add copied Slides
+      slideList.appendChild(clonedFirst);
+      slideList.insertBefore(clonedLast, slideList.firstElementChild);
+
+      // Add pagination dynamically
+      let pageChild = '';
+      for (var i = 0; i < slideLen; i++) {
+        pageChild += '<li class="dot';
+        pageChild += (i === startNum) ? ' dot_active' : '';
+        pageChild += '" data-index="' + i + '"><a href="#"></a></li>';
+      }
+      pagination.innerHTML = pageChild;
+      const pageDots = document.querySelectorAll('.dot'); // each dot from pagination
+
+      slideList.style.transform = "translate3d(-" + (slideWidth * (startNum + 1)) + "px, 0px, 0px)";
+
+      let curIndex = startNum; // current slide index (except copied slide)
+      let curSlide = slideContents[curIndex]; // current slide dom
+      curSlide.classList.add('slide_active');
+
+      /** Next Button Event */
+      slideBtnNext.addEventListener('click', function() {
+        if (curIndex <= slideLen - 1) {
+          slideList.style.transition = slideSpeed + "ms";
+          slideList.style.transform = "translate3d(-" + (slideWidth * (curIndex + 2)) + "px, 0px, 0px)";
+        }
+        if (curIndex === slideLen - 1) {
+          setTimeout(function() {
+            slideList.style.transition = "0ms";
+            slideList.style.transform = "translate3d(-" + slideWidth + "px, 0px, 0px)";
+          }, slideSpeed);
+          curIndex = -1;
+        }
+        curSlide.classList.remove('slide_active');
+        pageDots[(curIndex === -1) ? slideLen - 1 : curIndex].classList.remove('dot_active');
+        curSlide = slideContents[++curIndex];
+        curSlide.classList.add('slide_active');
+        pageDots[curIndex].classList.add('dot_active');
+      });
+
+      /** Prev Button Event */
+      slideBtnPrev.addEventListener('click', function() {
+        if (curIndex >= 0) {
+          slideList.style.transition = slideSpeed + "ms";
+          slideList.style.transform = "translate3d(-" + (slideWidth * curIndex) + "px, 0px, 0px)";
+        }
+        if (curIndex === 0) {
+          setTimeout(function() {
+            slideList.style.transition = "0ms";
+            slideList.style.transform = "translate3d(-" + (slideWidth * slideLen) + "px, 0px, 0px)";
+          }, slideSpeed);
+          curIndex = slideLen;
+        }
+        curSlide.classList.remove('slide_active');
+        pageDots[(curIndex === slideLen) ? 0 : curIndex].classList.remove('dot_active');
+        curSlide = slideContents[--curIndex];
+        curSlide.classList.add('slide_active');
+        pageDots[curIndex].classList.add('dot_active');
+      });
+
+      /** Pagination Button Event */
+      let curDot;
+      Array.prototype.forEach.call(pageDots, function (dot, i) {
+        dot.addEventListener('click', function (e) {
+          e.preventDefault();
+          curDot = document.querySelector('.dot_active');
+          curDot.classList.remove('dot_active');
+          
+          curDot = this;
+          this.classList.add('dot_active');
+
+          curSlide.classList.remove('slide_active');
+          curIndex = Number(this.getAttribute('data-index'));
+          curSlide = slideContents[curIndex];
+          curSlide.classList.add('slide_active');
+          slideList.style.transition = slideSpeed + "ms";
+          slideList.style.transform = "translate3d(-" + (slideWidth * (curIndex + 1)) + "px, 0px, 0px)";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
